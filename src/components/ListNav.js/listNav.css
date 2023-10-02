@@ -1,0 +1,28 @@
+.listNav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0 2rem;
+    width: 60%;
+}
+
+.listNav li {
+    list-style: none;
+}
+
+.listNav li a {
+    text-decoration: none;
+    color: wheat;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 5px 5px 10px black;
+    transition: .3s;
+}
+
+.listNav li a:hover {
+    color: #66A5AD;
+}
+
+.listNav li a:active {
+    text-shadow: none;
+}
