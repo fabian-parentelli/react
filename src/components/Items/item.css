@@ -1,0 +1,28 @@
+
+.item {
+    border: solid 1px;
+    background-color: #638EAF;
+    border-radius: 6px;
+    width: 260px;
+    padding: 6px;
+    box-shadow: 1px 1px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item img {
+    margin-top: 1rem;
+    width: 240px;
+    border-radius: 12px;
+}
+
+.item h3 {
+    margin: 6px 0 0 0;
+}
+
+.item p {
+    margin: 6px 0 6px 0;
+    font-weight: 600;
+}

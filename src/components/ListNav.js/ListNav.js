@@ -1,13 +1,20 @@
+import { Link } from 'react-router-dom';
 import './listNav.css';
 
 const ListNav = () => {
-    
-    return(
-        <ul className='listNav'>
-           <li><a href="#">Enlace 1</a></li>
-           <li><a href="#">Enlace 2</a></li>
-           <li><a href="#">Enlace 3</a></li>
-        </ul>
+
+    return (
+        <div className='listNav'>
+            <p>Paginas</p>
+            <ul>
+                <Link className='lnk' to={'/'}>Menú</Link>
+                <Link className='lnk' to={'/products/nacional'}>Nacional</Link>
+                <Link className='lnk' to={'/products/uruguay'}>Uruguay</Link>
+                <Link className='lnk' to={'/products/inglaterra'}>Inglaterra</Link>
+                <Link className='lnk' to={'/products/eeuu'}>Estados Unidos</Link>
+            </ul>
+        </div>
+
     );
 };
 

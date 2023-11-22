@@ -6,11 +6,13 @@ import './navBar.css';
 
 const NavBar = () => {
 
-    return(
+    return (
         <div className="navBar">
-            <Brand />
+            <div className="navBarUp">
+                <Brand />
+                <CartWidget />
+            </div>
             <ListNav />
-            <CartWidget />
         </div>
     );
 };

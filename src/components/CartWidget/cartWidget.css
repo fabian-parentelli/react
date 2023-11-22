@@ -1,20 +1,14 @@
 .cartWidget {
+    width: auto;
     display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-right: 6rem;
-    position: relative;
 }
 
 .cartWidget p {
-    width: 20px;
-    height: auto;
-    text-align: center;
-    background-color: #cccccc;
-    padding: 3px;
+    background-color: wheat;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    font-size: 1.2rem;
-    font-weight: 600;
-    position: absolute;
-    right: -10px;
 }

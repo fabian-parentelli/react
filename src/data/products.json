@@ -1,0 +1,185 @@
+[
+    {
+        "id": 1,
+        "name": "La era de la boludez",
+        "type": "nacional",
+        "description": "Divididos 1993",
+        "image": "https://i.scdn.co/image/ab67616d0000b2737e09bfe5e78c7fb5cb3d9b68",
+        "price": 2125,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "name": "Cancion Animal",
+        "type": "nacional",
+        "description": "Soda Stereo 1990",
+        "image": "https://www.rockandpop.cl/wp-content/uploads/2019/08/cancion-animal-3.jpg",
+        "price": 6400,
+        "stock": 4
+    },
+    {
+        "id": 3,
+        "name": "El amor despues del amor",
+        "type": "nacional",
+        "description": "Fito Paez 1992",
+        "image": "https://i.scdn.co/image/ab67616d0000b273b80f37385bd537d17f9be93a",
+        "price": 2962,
+        "stock": 3
+    },
+    {
+        "id": 4,
+        "name": "Jessico",
+        "type": "nacional",
+        "description": "Babasonicos 2001",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/98/51/85/98518582-a603-50c3-6717-8e18dbcca4c2/dj.bukbslhw.jpg/1200x1200bf-60.jpg",
+        "price": 4800,
+        "stock": 6
+    },
+    {
+        "id": 5,
+        "name": "El Leon",
+        "type": "nacional",
+        "description": "Los Fabulosos Cadillacs 1992",
+        "image": "https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/7FCUMZTP5BASLF7LAXBUJ2NQVU.jpg",
+        "price": 3886,
+        "stock": 7
+    },
+
+    {
+        "id": 6,
+        "name": "De bichos y flores",
+        "type": "uruguay",
+        "description": "La vela puerca 2001",
+        "image": "https://m.media-amazon.com/images/I/61kRpqy5xZL._UF894,1000_QL80_.jpg",
+        "price": 1499,
+        "stock": 1
+    },
+    {
+        "id": 7,
+        "name": "Este fuerte viento que sopla",
+        "type": "uruguay",
+        "description": "No te va a gustar 2002",
+        "image": "https://static.qobuz.com/images/covers/5a/kd/pqwkl9lu8kd5a_600.jpg",
+        "price": 3104,
+        "stock": 2
+    },
+    {
+        "id": 8,
+        "name": "Terraja",
+        "type": "uruguay",
+        "description": "El peyote asesino 1998",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/43/ad/a7/43ada736-f8da-adeb-b7c8-5e9db2222116/00602567992554.rgb.jpg/1200x1200bb.jpg",
+        "price": 8000,
+        "stock": 5
+    },
+    {
+        "id": 9,
+        "name": "Porfiado",
+        "type": "uruguay",
+        "description": "El cuarteto de nos 2012",
+        "image": "https://m.media-amazon.com/images/I/61Si--2zAvL._UF894,1000_QL80_.jpg",
+        "price": 4325,
+        "stock": 4
+    },
+    {
+        "id": 10,
+        "name": "Buena suerte... Hasta Siempre",
+        "type": "uruguay",
+        "description": "Buitres 2001",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music/cc/ce/7d/mzi.vubotisj.jpg/600x600bf-60.jpg",
+        "price": 3256,
+        "stock": 6
+    },
+    
+    {
+        "id": 11,
+        "name": "Abbey Road",
+        "type": "inglaterra",
+        "description": "Beatles 1969",
+        "image": "https://i.pinimg.com/originals/c3/d8/dd/c3d8dda2904c3eb9aabb7eaecaaa2632.jpg",
+        "price": 7719,
+        "stock": 7
+    },
+    {
+        "id": 12,
+        "name": "Love you live",
+        "type": "inglaterra",
+        "description": "The Rolling Stones 1977",
+        "image": "https://cdnx.jumpseller.com/tienda-de-vinilos/image/35675985/IMG_8957.jpeg?1684977179",
+        "price": 9169,
+        "stock": 3
+    },
+    {
+        "id": 13,
+        "name": "The best of Blur",
+        "type": "inglaterra",
+        "description": "The Blur 2000",
+        "image": "https://lastfm.freetls.fastly.net/i/u/ar0/12581487c7864b86bddfa48755c29233.jpg",
+        "price": 2193,
+        "stock": 5
+    },
+    {
+        "id": 14,
+        "name": "Queen II",
+        "type": "inglaterra",
+        "description": "Queen 1974",
+        "image": "https://www.udiscovermusica.com/wp-content/uploads/sites/7/2022/12/Queen-II-album-cover-820-1536x1536-1.jpeg",
+        "price": 7789,
+        "stock": 2
+    },
+    {
+        "id": 15,
+        "name": "Heathen Chemistry",
+        "type": "inglaterra",
+        "description": "Oasis 2002",
+        "image": "https://m.media-amazon.com/images/I/51uC+US1KfL._UF1000,1000_QL80_.jpg",
+        "price": 6093,
+        "stock": 5
+    },
+    
+    {
+        "id": 16,
+        "name": "Californication",
+        "type": "eeuu",
+        "description": "Red hot chili Pepper 1999",
+        "image": "https://images.genius.com/1dff88c7b88a6c777eca5277dff6a5ab.1000x1000x1.jpg",
+        "price": 6050,
+        "stock": 7
+    },
+    {
+        "id": 17,
+        "name": "Medicine At Midnight",
+        "type": "eeuu",
+        "description": "Foo Fighters 2021",
+        "image": "https://www.esonosoy.com/wp-content/uploads/2021/12/foo-fighters-medicine-at-midnight-.jpg",
+        "price": 7715,
+        "stock": 1
+    },
+    {
+        "id": 18,
+        "name": "Toys in the attic",
+        "type": "eeuu",
+        "description": "Aerosmith 1975",
+        "image": "https://lastfm.freetls.fastly.net/i/u/ar0/f9e9632ca1da6116f2b6e5f70ae9e7df.jpg",
+        "price": 9754,
+        "stock": 6
+    },
+    {
+        "id": 19,
+        "name": "The Doors",
+        "type": "eeuu",
+        "description": "The Doors 1967",
+        "image": "https://i.pinimg.com/736x/10/24/26/1024269993fd02ea15b00df87acce57a.jpg",
+        "price": 2391,
+        "stock": 3
+    },
+    {
+        "id": 20,
+        "name": "Live & Rare",
+        "type": "eeuu",
+        "description": "Rage Against the Machine 1998",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/34/8d/e3/348de3c5-48ad-9814-7c81-ddd33a50434e/886448665335.jpg/1200x1200bf-60.jpg",
+        "price": 9216,
+        "stock": 2
+    }
+]
