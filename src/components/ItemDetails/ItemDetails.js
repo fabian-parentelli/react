@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
-import './itemDetails.css'
+import './itemDetails.css';
+import { useCartContext } from '../../context/CartContext';
 
 const ItemDetails = ({ id, name, image, description, price, type, stock }) => {
+
+    const { isInCart, agregarAlCarrito } = useCartContext();
 
     const [quantity, setQuantity] = useState(1);
     const [itemAdded, setItemAdedd] = useState(false);
@@ -12,7 +15,8 @@ const ItemDetails = ({ id, name, image, description, price, type, stock }) => {
     const handleVolver = () => navigate(-1);
 
     const handleAgregar = () => {
-        console.log({ id, name, image, description, price, stock, quantity });
+        const item = { id, name, image, description, price, stock, quantity };
+        agregarAlCarrito(item)
         setItemAdedd(true);
     };
 
@@ -25,7 +29,17 @@ const ItemDetails = ({ id, name, image, description, price, type, stock }) => {
                     <p>Categoria: {type}</p>
                     <p>Banda: {description}</p>
                     <p>Precio: ${price}</p>
-                    {!itemAdded && <ItemCount quantity={quantity} setQuantity={setQuantity} handleAgregar={handleAgregar} max={stock} />}
+                    {
+                        !isInCart(id) 
+                            ? !itemAdded && 
+                            <ItemCount 
+                                quantity={quantity} 
+                                setQuantity={setQuantity} 
+                                handleAgregar={handleAgregar} 
+                                max={stock} 
+                            />
+                            : <Link to="/cart">Terminar Mi Compra</Link>
+                    }
                     <button className='btn' onClick={handleVolver}>Volver</button>
                 </div>
             </div>
