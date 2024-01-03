@@ -10,9 +10,9 @@ const ItemCount = ({ quantity, setQuantity, handleAgregar, max }) => {
         <div className="itemCount">
 
             <div className="count">
-                <p className='add' onClick={handleLess}>-</p>
+                <p className={quantity > 1 ? 'add': 'addFile' } onClick={handleLess}>-</p>
                 <p>{quantity}</p>
-                <p className='add' onClick={handleAdd}>+</p>
+                <p className={quantity === max ? 'addFile' : 'add' } onClick={handleAdd}>+</p>
             </div>
 
             <Link className='btn' to={'/cart'} onClick={handleAgregar}>Agergar al Carrito</Link>

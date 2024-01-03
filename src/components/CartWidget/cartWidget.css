@@ -1,6 +1,14 @@
 .cartWidget {
     width: auto;
     display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out all;
+}
+
+.cartWidget-active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .cartWidget p {

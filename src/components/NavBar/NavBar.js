@@ -13,6 +13,7 @@ const NavBar = () => {
             <div className="navBarUp">
                 <Brand />
                 <CartWidget />
+                
             </div>
             <ListNav />
             {user.logged && 

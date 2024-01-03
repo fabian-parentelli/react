@@ -16,18 +16,23 @@ export const useLoginContext = () => useContext(LoginContext);
 
 export const LoginProvider = ({ children }) => {
 
+    const [loading, setLoading] = useState(false);
     const [user, setUser] = useState({ email: '', logged: false, error: null });
 
     const login = (values) => {
-        const match = MOCK_USER.find(user => user.email === values.email && user.password === values.password);
-        if (match) setUser({ email: match.email, logged: true, error: null });
-        else setUser({ email: null, logged: false, error: 'Los datos son inválidos' });
+        setLoading(true);
+        setTimeout(() => {
+            const match = MOCK_USER.find(user => user.email === values.email && user.password === values.password);
+            if (match) setUser({ email: match.email, logged: true, error: null });
+            else setUser({ email: null, logged: false, error: 'Los datos son inválidos' });
+            setLoading(false);
+        }, 1500);
     };
 
     const logout = () => setUser({ email: '', logged: false, error: null });
 
     return (
-        <LoginContext.Provider value={{ user, login, logout }}>
+        <LoginContext.Provider value={{ user, login, logout, loading }}>
             {children}
         </LoginContext.Provider>
     );
