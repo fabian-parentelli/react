@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getDate } from '../../helpers/getDate.js';
 import ItemList from "../ItemList/ItemList.js";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config.js";
 
 const ItemListContainer = () => {
 
@@ -12,13 +13,23 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true);
-        getDate()
+        let q;
+        // 1 - referencia. (Sincrónico).
+        const productsRef = collection(db, 'products');
+        if(categoryId) q = query(productsRef, where("type", "==" , categoryId));
+
+        // 2 -peticion asincronica. (Asincrónico).
+        getDocs(q || productsRef)
             .then((res) => {
-                if (!categoryId) setProducts(res);
-                else setProducts(res.filter(prod => prod.type === categoryId));
+                setProducts(res.docs.map((doc) => {
+                    return {
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                }))
             })
-            .catch((error) => { console.log(error) })
-            .finally(() => setLoading(false)) // Al final de cualquier caso siempre se ejecuta el finally
+            .finally(() => setLoading(false))
+
     }, [categoryId]);
 
     return (
