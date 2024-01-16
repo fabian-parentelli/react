@@ -34,6 +34,7 @@ const Cart = () => {
             }
             <h4>Total: ${totalCart()}</h4>
             <button onClick={emptyCart}>Vaciar Carrito</button>
+            <Link to={'/chekout'}>Terminar mi copra</Link>
         </div>
     );
 };
