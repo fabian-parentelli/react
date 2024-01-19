@@ -3,26 +3,14 @@ import { useCartContext } from "../../context/CartContext";
 import { Link, Navigate } from "react-router-dom";
 import { db } from '../../firebase/config.js';
 import { collection, writeBatch, documentId, getDocs, query, addDoc, doc, updateDoc, getDoc, where } from "firebase/firestore";
+import { Formik } from "formik";
 
 const Chekout = () => {
 
     const { cart, totalCart, emptyCart } = useCartContext();
     const [orderId, setOrderId] = useState(null)
-    const [values, setValues] = useState({
-        name: '',
-        address: '',
-        email: ''
-    });
 
-    const handleInputChange = (e) => {
-        setValues({
-            ...values,
-            [e.target.name]: e.target.value
-        })
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const createOrder = async (values) => {
 
         if (!values.name || !values.address || !values.email) return alert('Datos Invalidos');
 
@@ -84,32 +72,41 @@ const Chekout = () => {
             <h2>Terminar mi compra</h2>
             <hr />
 
-            <form onSubmit={handleSubmit}>
-                <input
-                    onChange={handleInputChange}
-                    type="text"
-                    name="name"
-                    value={values.name}
-                    placeholder="Tu Nombre"
-                />
+            <Formik
+                initialValues={{ name: '', address: '', email: '' }}
+                onSubmit={(values) => {
+                    createOrder(values);
+                }}
+            >
+                {({ values, handleChange, handleSubmit }) => (
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            onChange={handleChange}
+                            type="text"
+                            name="name"
+                            value={values.name}
+                            placeholder="Tu Nombre"
+                        />
 
-                <input
-                    onChange={handleInputChange}
-                    type="text"
-                    name="address"
-                    value={values.address}
-                    placeholder="Tu direccion"
-                />
+                        <input
+                            onChange={handleChange}
+                            type="text"
+                            name="address"
+                            value={values.address}
+                            placeholder="Tu direccion"
+                        />
 
-                <input
-                    onChange={handleInputChange}
-                    type="email"
-                    name="email"
-                    value={values.email}
-                    placeholder="Tu email"
-                />
-                <button>Enviar</button>
-            </form>
+                        <input
+                            onChange={handleChange}
+                            type="email"
+                            name="email"
+                            value={values.email}
+                            placeholder="Tu email"
+                        />
+                        <button type="submit">Enviar</button>
+                    </form>
+                )}
+            </Formik>
         </div>
     );
 };
